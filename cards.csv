@@ -1,0 +1,82 @@
+Title,Colors,Type
+Flooded Strand,wu,fetch
+Polluted Delta,ub,fetch
+Bloodstained Mire,br,fetch
+Wooded Foothills,rg,fetch
+Windswept Heath,wg,fetch
+Marsh Flats,wb,fetch
+Scalding Tarn,ur,fetch
+Verdant Catacombs,bg,fetch
+Arid Mesa,wr,fetch
+Misty Rainforest,ug,fetch
+Tundra,wu,dual
+Underground Sea,ub,dual
+Badlands,br,dual
+Taiga,rg,dual
+Savannah,wg,dual
+Scrubland,wb,dual
+Volcanic Island,ur,dual
+Bayou,bg,dual
+Plateau,wr,dual
+Tropical Island,ug,dual
+Hallowed Fountain,wu,dual
+Watery Grave,ub,dual
+Blood Crypt,br,dual
+Stomping Ground,rg,dual
+Temple Garden,wg,dual
+Godless Shrine,wb,dual
+Steam Vents,ur,dual
+Overgrown Tomb,bg,dual
+Sacred Foundry,wr,dual
+Breeding Pool,ug,dual
+Glacial Fortress,wu,check
+Drowned Catacomb,ub,check
+Dragonskull Summit,br,check
+Rootbound Crag,rg,check
+Sunpetal Grove,wg,check
+Isolated Chapel,wb,check
+Sulfur Falls,ur,check
+Woodland Cemetery,bg,check
+Clifftop Retreat,wr,check
+Hinterland Harbor,ug,check
+Mystic Gate,wu,filter
+Sunken Ruins,ub,filter
+Graven Cairns,br,filter
+Fire-Lit Thicket,rg,filter
+Wooded Bastion,wg,filter
+Fetid Heath,wb,filter
+Cascade Bluffs,ur,filter
+Twilight Mire,bg,filter
+Rugged Prairie,wr,filter
+Flooded Grove,ug,filter
+Horizon Canopy,wg,horizon
+Silent Clearing,wb,horizon
+Fiery Islet,ur,horizon
+Nurturing Peatland,bg,horizon
+Sunbaked Canyon,wr,horizon
+Waterlogged Grove,ug,horizon
+Prairie Stream,wu,battle
+Sunken Hollow,ub,battle
+Smoldering Marsh,br,battle
+Cinder Glade,rg,battle
+Canopy Vista,wg,battle
+Azorius Signet,wu,signet
+Boros Signet,wr,signet
+Dimir Signet,ub,signet
+Golgari Signet,bg,signet
+Gruul Signet,rg,signet
+Izzet Signet,ur,signet
+Orzhov Signet,wb,signet
+Rakdos Signet,br,signet
+Selesnya Signet,wg,signet
+Simic Signet,ug,signet
+Talisman of Progress,wu,talisman
+Talisman of Dominance,ub,talisman
+Talisman of Indulgence,br,talisman
+Talisman of Impulse,rg,talisman
+Talisman of Unity,wg,talisman
+Talisman of Hierarchy,wb,talisman
+Talisman of Creativity,ur,talisman
+Talisman of Resilience,bg,talisman
+Talisman of Conviction,wr,talisman
+Talisman of Curiosity,ug,talisman
