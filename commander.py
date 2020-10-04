@@ -72,8 +72,7 @@ if __name__ == "__main__":
     for i in basics:
         listoflands.append(i.get('mylist'))
 
-    
-    Title = list(dict.fromkeys(listoflands))
+    mylist = list(dict.fromkeys(listoflands))
     f = open(str(name)+".cod",'w')
     f.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<cockatrice_deck version=\"1\">\n\t<deckname></deckname>\n\t<comments></comments>\n\t<zone name=\"main\">\n")
     for name in mylist:
