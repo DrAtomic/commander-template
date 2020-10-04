@@ -17,9 +17,8 @@ def color_or(dictionary,color):
     return result
 
 
-
 def fetch(list_dictionaries):
-    if any(t== "fetch" for t in list_dictionaries.values()):
+    if any(t == "fetch" for t in list_dictionaries.values()):
         return list_dictionaries
 
 
@@ -31,6 +30,8 @@ def color_and(dictionary, color):
                 temp.append(i)
     result = [x for x in temp if x is not None]
     return(result)
+
+
 
 if __name__ == "__main__":
     
@@ -48,6 +49,11 @@ if __name__ == "__main__":
     fetchlands = [dict(t) for t in {tuple(d.items()) for d in fetchlands}]
     y = color_and(test,colors)
 
+    auto_include = []
+    for i in test:
+        if any(t == "all" for t in i.values()):
+            auto_include.append(i)
+    
     listoflands = []
 
     for i in fetchlands:
@@ -56,14 +62,15 @@ if __name__ == "__main__":
     for i in y:
         listoflands.append(i.get('Title'))
 
+    for i in auto_include:
+        listoflands.append(i.get('Title'))
 
+    
     mylist = list(dict.fromkeys(listoflands))
-    mylist.extend(['Mana Crypt','Command Tower','Ancient Tomb','Sol Ring','Arcane Signet'])
     f = open(str(name)+".cod",'w')
     f.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<cockatrice_deck version=\"1\">\n\t<deckname></deckname>\n\t<comments></comments>\n\t<zone name=\"main\">\n")
     for name in mylist:
         f.write("\t\t<card number=\"1\" name=\""+str(name)+"\"/>\n")
-    #this is where all the normal stuff goes
     f.write("\t</zone>\n</cockatrice_deck>")
     f.close()
 
