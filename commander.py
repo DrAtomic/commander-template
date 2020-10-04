@@ -44,18 +44,22 @@ if __name__ == "__main__":
     fetchlands=[]
     for i in x:
         fetchlands.append(fetch(i))
-
     fetchlands = [t for t in fetchlands if t is not None]
     fetchlands = [dict(t) for t in {tuple(d.items()) for d in fetchlands}]
+
+    basics = []
+    for i in x:
+        if any(t == "basic" for t in i.values()):
+            basics.append(i)
+    
     y = color_and(test,colors)
 
     auto_include = []
-    for i in test:
+    for i in x:
         if any(t == "all" for t in i.values()):
             auto_include.append(i)
-    
+            
     listoflands = []
-
     for i in fetchlands:
         listoflands.append(i.get('Title'))
 
@@ -65,8 +69,11 @@ if __name__ == "__main__":
     for i in auto_include:
         listoflands.append(i.get('Title'))
 
+    for i in basics:
+        listoflands.append(i.get('mylist'))
+
     
-    mylist = list(dict.fromkeys(listoflands))
+    Title = list(dict.fromkeys(listoflands))
     f = open(str(name)+".cod",'w')
     f.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<cockatrice_deck version=\"1\">\n\t<deckname></deckname>\n\t<comments></comments>\n\t<zone name=\"main\">\n")
     for name in mylist:
