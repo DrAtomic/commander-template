@@ -70,7 +70,7 @@ if __name__ == "__main__":
         listoflands.append(i.get('Title'))
 
     for i in basics:
-        listoflands.append(i.get('mylist'))
+        listoflands.append(i.get('Title'))
 
     mylist = list(dict.fromkeys(listoflands))
     f = open(str(name)+".cod",'w')
