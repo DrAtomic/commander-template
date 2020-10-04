@@ -9,6 +9,11 @@ Scalding Tarn,ur,fetch
 Verdant Catacombs,bg,fetch
 Arid Mesa,wr,fetch
 Misty Rainforest,ug,fetch
+Plains,w,basic
+Island,u,basic
+Swamp,b,basic
+Mountain,r,basic
+Forest,g,basic
 Tundra,wu,dual
 Underground Sea,ub,dual
 Badlands,br,dual
