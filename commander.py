@@ -27,7 +27,8 @@ def color_and(dictionary, color):
     perm = ["".join(map(str,comb)) for comb in permutations(color,2)]
     if len(color) > 2:
         multi_perm = ["".join(map(str,comb)) for comb in permutations(color,len(color))]
-        perm.append(multi_perm)
+        perm = [j for i in zip(perm,multi_perm) for j in i]
+    print(perm)
     for c in perm:
         for i in dictionary:
             if c == i.get('Colors'):
