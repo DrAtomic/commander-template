@@ -24,10 +24,13 @@ def fetch(list_dictionaries):
 
 def color_and(dictionary, color):
     temp = []
-    tesat = ["".join(map(str,comb)) for comb in permutations(color,2)]
-    for c in tesat:
+    perm = ["".join(map(str,comb)) for comb in permutations(color,2)]
+    if len(color) > 2:
+        multi_perm = ["".join(map(str,comb)) for comb in permutations(color,len(color))]
+        perm.append(multi_perm)
+    for c in perm:
         for i in dictionary:
-            if c in i.get('Colors'):
+            if c == i.get('Colors'):
                 temp.append(i)
     result = [x for x in temp if x is not None]
     return(result)
