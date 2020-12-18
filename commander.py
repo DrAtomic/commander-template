@@ -68,9 +68,7 @@ if __name__ == "__main__":
 
     list_of_cards = list(dict.fromkeys(dict_of_cards))
     
-    f = open(str(name)+".cod",'w')
-    f.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<cockatrice_deck version=\"1\">\n\t<deckname></deckname>\n\t<comments></comments>\n\t<zone name=\"main\">\n")
+    f = open(str(name)+".txt",'w')
     for name in list_of_cards:
-        f.write("\t\t<card number=\"1\" name=\""+str(name)+"\"/>\n")
-    f.write("\t</zone>\n</cockatrice_deck>")
+        f.write(str(name)+"\n")
     f.close()
