@@ -41,25 +41,25 @@ def color_and(dictionary, color):
 if __name__ == "__main__":
     
     df = pd.read_csv('cards.csv')
-    test = df.to_dict(orient='records')
+    cards_dict = df.to_dict(orient='records')        
     name = str(sys.argv[1])
     colors = list(sys.argv[2])
-    
-    df = pd.read_csv('cards.csv')
-    test = df.to_dict(orient='records')
-    x = color_or(test, colors)
-    full_dict =[]
+
+    full_dict = []
+    for i in cards_dict:
+        if any(t == "all" for t in i.values()):
+            full_dict.append(i)
+            
+    x = color_or(cards_dict, colors)
     for i in x:
         full_dict.append(fetch(i))
         if any(t == "basic" for t in i.values()):
-            full_dict.append(i)
-        if any(te == "all" for te in i.values()):
             full_dict.append(i)
         
     full_dict = [t for t in full_dict if t is not None]
     full_dict = [dict(t) for t in {tuple(d.items()) for d in full_dict}]
 
-    y = color_and(test,colors)
+    y = color_and(cards_dict,colors)
     dict_of_cards = []
     for i in y:
        dict_of_cards.append(i.get('Title'))
