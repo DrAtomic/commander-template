@@ -1,5 +1,5 @@
 # commander-template
-Adds all the boring cards to a .cod file
+Adds all the boring cards to a .txt file
 
 # prereq
 `pip install pandas`
